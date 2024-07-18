@@ -1,11 +1,14 @@
 import './index.css';
 import Header from './Header'
+import Add from './Add'
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      ciaooo
+      <main>
+        <Add></Add>
+      </main>
     </div>
   );
 }

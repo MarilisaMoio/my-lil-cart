@@ -17,27 +17,48 @@ ul, ol {
   --main-dark: #4E070C;
   --main-light: #FDE4CE; 
   --red: #D22701;
-  --orange: #ff823a;
+  --orange: #ffaa79;
   --green: #AAD15f;
 }
 
 body {
   font-family: "Rubik", sans-serif;
+  color: var(--main-dark);
 }
 
 .container{
   max-width: 1140px;
   margin: 0 auto;
+  padding: 20px;
+}
+
+.text-center{
+  text-align: center;
 }
 /* #endregion general */
 
 /* #region HEADER */
   header{
-    text-align: center;
     font-size: 3rem;
     font-weight: 700;
-    padding: 20px;
-    color: var(--main-dark);
     background-color: var(--green);
   }
 /* #endregion HEADER */
+
+/* #region ADD */
+  .add{
+    background-color: var(--red);
+    & * + *{
+      margin-left: 10px;
+    }
+    & select,
+    & input{
+      background-color: var(--orange);
+      padding: 5px;
+      border-radius: 15px;
+      &:active{
+        border-color: var(--green);
+      }
+    }
+  }
+/* #endregion ADD */
