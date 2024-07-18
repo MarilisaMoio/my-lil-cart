@@ -19,7 +19,7 @@ ul, ol {
   --red: #D22701;
   --orange: #ffaa79;
   --green: #AAD15f;
-  --light-blue: #72dddb;
+  --light-blue: #96e0df;
 }
 
 body {
@@ -73,6 +73,17 @@ main{
         border-color: var(--green);
       }
     }
+    & button{
+      padding: 5px 15px;
+      border-radius: 15px;
+      background-color: var(--green);
+      font-weight: 500;
+      color:var(--main-dark)
+    }
+  }
+
+  form{
+    margin-top: 10px;
   }
 /* #endregion ADD */
 
