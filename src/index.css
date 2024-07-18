@@ -91,6 +91,10 @@ main{
 .list{
   background-color: var(--main-light);
   font-size: 20px;
+  & p{
+    margin-top: 20px;
+    font-size: 25px;
+  }
 }
 
 ul{
@@ -108,6 +112,15 @@ li * + *{
 }
 
 input[type="checkbox"]{
-  accent-color: var(--main-dark)
+  accent-color: var(--main-dark);
+  &:checked + *{
+    text-decoration: line-through;
+  }
 }
 /* #endregion LIST */
+
+/* #region STATS */
+.stats{
+  background-color: var(--light-blue);
+}
+/* #endregion STATS */

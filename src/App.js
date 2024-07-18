@@ -3,30 +3,10 @@ import './index.css';
 import Header from './Header'
 import Add from './Add'
 import List from './List'
+import Stats from './Stats'
 
 function App() {
-  let testList = [
-    {
-        id: 1,
-        quantity: 1,
-        name: "frutta",
-        inCart: false
-    },
-    {
-        id: 2,
-        quantity: 1,
-        name: "Pasta barilla",
-        inCart: false
-    },
-    {
-        id: 3,
-        quantity: 1,
-        name: "Pera",
-        inCart: false
-    },
-]
-
-  const [list, setList] = useState(testList);
+  const [list, setList] = useState([]);
 
   function handleDeleteItem(id){
     setList((list) => list.filter((el) => el.id !== id))
@@ -36,12 +16,17 @@ function App() {
     setList([...list, item])
   }
 
+  function handleCheckedItem(id){
+    setList((list) => list.map((el) => el.id === id ? { ...el, inCart: !el.inCart } : el))
+  }
+
   return (
     <div className="App">
       <Header></Header>
       <main>
         <Add list={list} onAddItem={handleAddItem}></Add>
-        <List list={list} onDeleteItem={handleDeleteItem}></List>
+        <List list={list} onDeleteItem={handleDeleteItem} onToggleItem={handleCheckedItem}></List>
+        <Stats list={list}></Stats>
       </main>
     </div>
   );
