@@ -1,7 +1,7 @@
 export default function Stats({ list }){
     const totalItems = list.length
     const packedItems = list.filter((list) => list.inCart).length
-    const percentage = packedItems / list.length * 100
+    const percentage = Math.round(packedItems / list.length * 100)
 
     return (
         <section className="stats">
