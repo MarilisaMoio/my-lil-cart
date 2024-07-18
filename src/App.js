@@ -25,7 +25,7 @@ function App() {
       <Header></Header>
       <main>
         <Add list={list} onAddItem={handleAddItem}></Add>
-        <List list={list} onDeleteItem={handleDeleteItem} onToggleItem={handleCheckedItem}></List>
+        <List list={list} onDeleteItem={handleDeleteItem} onToggleItem={handleCheckedItem} onClearList={setList}></List>
         <Stats list={list}></Stats>
       </main>
     </div>

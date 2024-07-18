@@ -91,6 +91,11 @@ main{
 .list{
   background-color: var(--main-light);
   font-size: 20px;
+  & .container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
   & p{
     margin-top: 20px;
     font-size: 25px;
@@ -115,6 +120,25 @@ input[type="checkbox"]{
   accent-color: var(--main-dark);
   &:checked + *{
     text-decoration: line-through;
+  }
+}
+
+.actions{
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: auto;
+  & > * {
+    padding: 5px;
+    border-radius: 15px;
+    color: var(--main-dark)
+  }
+  & > select {
+    background-color: var(--orange);
+  }
+  & button {
+    background-color: var(--green);
+    margin-left: 10px;
+    padding: 5px 15px;
   }
 }
 /* #endregion LIST */
