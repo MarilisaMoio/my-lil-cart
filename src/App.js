@@ -1,6 +1,7 @@
 import './index.css';
 import Header from './Header'
 import Add from './Add'
+import List from './List'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header></Header>
       <main>
         <Add></Add>
+        <List></List>
       </main>
     </div>
   );

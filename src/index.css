@@ -19,21 +19,34 @@ ul, ol {
   --red: #D22701;
   --orange: #ffaa79;
   --green: #AAD15f;
+  --light-blue: #72dddb;
 }
 
 body {
   font-family: "Rubik", sans-serif;
+  font-weight: 500;
   color: var(--main-dark);
 }
 
+.App{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh
+}
+
 .container{
-  max-width: 1140px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .text-center{
   text-align: center;
+}
+
+main{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 /* #endregion general */
 
@@ -62,3 +75,28 @@ body {
     }
   }
 /* #endregion ADD */
+
+/* #region LIST */
+.list{
+  background-color: var(--main-light);
+  font-size: 20px;
+}
+
+ul{
+  overflow: scroll;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  justify-content: center;
+  align-content: start;
+}
+
+li * + *{
+  margin-left: 4px
+}
+
+input[type="checkbox"]{
+  accent-color: var(--main-dark)
+}
+/* #endregion LIST */

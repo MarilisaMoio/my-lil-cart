@@ -7,7 +7,7 @@ export default function Add(){
                     {Array.from({length: 20}, (_, i) => i + 1)
                     .map((num) => (<option value={num} key={num}>{num}</option>))}
                 </select>
-                <input type="text" name="item" />
+                <input type="text" name="item" placeholder="I need..." />
             </div>
         </section>
     )
