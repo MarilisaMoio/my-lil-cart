@@ -20,7 +20,7 @@ export default function Stats({ list }){
                     || (totalItems > 0 && <p>You have {totalItems} {totalItems === 1 ? "item" : "items"} in your list
                     {totalItems === 1 ? " and" + (list[0].inCart ? " you have it!" : " it's still hiding somewhere..." )
                     : ((packedItems === totalItems && " and you found everything!") || 
-                    (packedItems > 0 && ` you have already found ${packedItems} (${percentage}%)`) ||
+                    (packedItems > 0 && ` and you have already found ${packedItems} (${percentage}%)`) ||
                     (packedItems === 0 && `: remember to bring this list with you!`))}</p>)
                 }
             </div>
