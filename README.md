@@ -1,6 +1,7 @@
 # My lil cart  - first React project
 
 Based on a exercise from The Ultimate React Course by [Jonas Schmedtmann](https://github.com/jonasschmedtmann).
+You can try it out [here](https://my-lil-cart.netlify.app)!
 
 ### Goals
 
