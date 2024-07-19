@@ -16,7 +16,7 @@ ul, ol {
 :root{
   --main-dark: #4E070C;
   --main-light: #FDE4CE; 
-  --red: #D22701;
+  --red: #db1102;
   --orange: #ffaa79;
   --green: #AAD15f;
   --light-blue: #96e0df;
@@ -48,6 +48,24 @@ main{
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+input,
+select{
+  border: 2px solid var(--orange);
+  &:focus{
+    border: 2px solid var(--green);
+    outline: none
+  }
+}
+
+button:not(ul button){
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: var(--green);
+  font-weight: 500;
+  color:var(--main-dark);
+  border: 2px solid var(--green)
+}
 /* #endregion general */
 
 /* #region HEADER */
@@ -69,16 +87,12 @@ main{
       background-color: var(--orange);
       padding: 5px;
       border-radius: 15px;
-      &:active{
-        border-color: var(--green);
-      }
     }
-    & button{
+    & input{
       padding: 5px 15px;
-      border-radius: 15px;
-      background-color: var(--green);
-      font-weight: 500;
-      color:var(--main-dark)
+    }
+    & ::placeholder{
+      color: color-mix(in srgb, var(--main-dark) 60%, transparent 40%)
     }
   }
 
@@ -110,10 +124,13 @@ ul{
   gap: 1.2rem;
   justify-content: center;
   align-content: start;
+  & button{
+    background-color: transparent;
+  }
 }
 
 li * + *{
-  margin-left: 4px
+  margin-left: 4px;
 }
 
 input[type="checkbox"]{
@@ -128,17 +145,15 @@ input[type="checkbox"]{
   margin: 0 auto;
   margin-top: auto;
   & > * {
-    padding: 5px;
     border-radius: 15px;
     color: var(--main-dark)
   }
   & > select {
+    padding: 5px;
     background-color: var(--orange);
   }
   & button {
-    background-color: var(--green);
     margin-left: 10px;
-    padding: 5px 15px;
   }
 }
 /* #endregion LIST */
@@ -146,5 +161,6 @@ input[type="checkbox"]{
 /* #region STATS */
 .stats{
   background-color: var(--light-blue);
+  font-size: 20px;
 }
 /* #endregion STATS */
