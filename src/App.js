@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import './index.css';
 import Header from './Header'
 import Add from './Add'
@@ -6,7 +6,11 @@ import List from './List'
 import Stats from './Stats'
 
 function App() {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(JSON.parse(localStorage.getItem('list')) || []);
+
+  useEffect(() => {
+    localStorage.setItem('list', JSON.stringify(list))
+  }, [list])
 
   function handleDeleteItem(id){
     setList((list) => list.filter((el) => el.id !== id))
