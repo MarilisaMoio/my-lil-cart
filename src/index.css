@@ -58,13 +58,16 @@ select{
   }
 }
 
-button:not(ul button){
-  padding: 5px 15px;
-  border-radius: 15px;
-  background-color: var(--green);
-  font-weight: 500;
-  color:var(--main-dark);
-  border: 2px solid var(--green)
+button{
+  cursor: pointer;
+  &:not(ul button){
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: var(--green);
+    font-weight: 500;
+    color:var(--main-dark);
+    border: 2px solid var(--green)
+  }
 }
 /* #endregion general */
 
